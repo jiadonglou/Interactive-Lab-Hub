@@ -68,6 +68,10 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
+Setting：The interaction happened at the entrance of the room. It will happen when people wants to unlock their doors when going back home.
+Players: The home owners, guests, and delivery people
+Activity: The actor will talk to the device. The device has voice recognition software installed that can identify if the actor have access to the room. It will flash a green light and unlock the door if the actor is the homeowner. It will flash a yellow light if the voice input is not enough for the device to identify the actor. It will flash a red light if the actor does not have access to the room. Lastly, it will flash a blue light to indicate that the message from the actor is recorded and saved for the homeowner.
+Goals: Homeowner wants to access the room quickly by saying things like "Open the door". Guests would want to notify the home owner that they are here and have access at the permission of the home owner. The delivery people can notify the homeowner about their package. If the home owner is outside, the delivery people can leave the package at the front door and leave a voice message to the homeowner.
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
