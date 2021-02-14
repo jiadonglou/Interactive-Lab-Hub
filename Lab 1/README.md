@@ -122,6 +122,7 @@ Only now should you start worrying about what the device should look like. Devel
 Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
 
 **Include sketches of what your device might look like here.**
+![Alt text](sketch.jpg?raw=true "Title")
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 The concern is how to perfectly integrate the device into the existing door handle. The device need to look intuitively for the user. Therefore, the device looks very similar to smart door locks with password. The password section is replaced with a touch screen that can show different color of lights in different situation. In this way, it's very easy for first-time user to unerstand the purpose of the device is to unlock the door.
