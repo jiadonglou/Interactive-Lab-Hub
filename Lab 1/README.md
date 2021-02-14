@@ -68,9 +68,12 @@ _Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening th
 
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
+
 Setting：The interaction happened at the entrance of the room. It will happen when people wants to unlock their doors when going back home.
 Players: The home owners, guests, and delivery people
+
 Activity: The actor will talk to the device. The device has voice recognition software installed that can identify if the actor have access to the room. It will flash a green light and unlock the door if the actor is the homeowner. It will flash a yellow light if the voice input is not enough for the device to identify the actor. It will flash a red light if the actor does not have access to the room. Lastly, it will flash a blue light to indicate that the message from the actor is recorded and saved for the homeowner.
+
 Goals: Homeowner wants to access the room quickly by saying things like "Open the door". Guests would want to notify the home owner that they are here and have access at the permission of the home owner. The delivery people can notify the homeowner about their package. If the home owner is outside, the delivery people can leave the package at the front door and leave a voice message to the homeowner.
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
@@ -105,6 +108,7 @@ The sound function doesn't work for me. The sound is played 10 seconds late.
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
+https://drive.google.com/file/d/1napEsRvRHpmmJKN6LixCNA4LrN2v2wM3/view?usp=sharing
 
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
@@ -119,11 +123,12 @@ Think about the setting of the device: is the environment a place where the devi
 **Include sketches of what your device might look like here.**
 
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
-
+The concern is how to perfectly integrate the device into the existing door handle. The device need to look intuitively for the user. Therefore, the device looks very similar to smart door locks with password. The password section is replaced with a touch screen that can show different color of lights in different situation. In this way, it's very easy for first-time user to unerstand the purpose of the device is to unlock the door.
 
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
+https://drive.google.com/file/d/1I7hsdU0fXCQn75dqZ8nDpeNrnDmuRrPz/view?usp=sharing
 
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
