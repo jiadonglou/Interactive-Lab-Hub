@@ -78,16 +78,18 @@ Sketch a storyboard of the interactions you are planning. It does not need to be
 
 Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
 **Summarize feedback you got here.**
-
+The device(display) can be integrated with the door handle. Simillar to password door locks, the device can have a display on top of the door handle.
 
 ## Part B. Act out the Interaction
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
 **Are there things that seemed better on paper than acted out?**
+On the paper, it is easier to represent the actor(homeowner, visitors, delivery people and etc.) by writing the identify on the shirt. However, it's difficult to show the identify of the actor when acting out. This can be solved by adding subtitles for the video prototyping.
+
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
-
+In addition to the light response, it's better to have sound feedback as well.
 
 ## Part C. Prototype the device
 
@@ -97,6 +99,7 @@ Code for the "Tinkerbelle" tool, and instructions for setting up the server and 
 
 We invented this tool for this lab! 
 **Give us feedback on Tinkerbelle.**
+The sound function doesn't work for me. The sound is played 10 seconds late. 
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
@@ -124,6 +127,7 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+My friend Yuxuan Chen helped me recording the video prototype.
 
 # Staging Interaction, Part 2 
 
