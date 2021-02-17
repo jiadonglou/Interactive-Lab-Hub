@@ -152,6 +152,8 @@ Feedback 1（xl863）: I actually want to own one of such devices if there's a p
 
 Feedback 2 （cl773）:It is pretty cool to prototype the device in different scnearios. It is a smart way to incorporate the light not only as a visual feedback, but also to convey message in different cases. It is also interesting to have different audio for each case.
 
+Feedback 3 (wz425): I think it is a very interesting idea. From watching the prototype video, I guess it functions similar to a traditional password lock but  it uses voice recognition algorithm to identify the homeowner. It’s a very practical idea and it will improve the life for everyone. My only concerns will be the accuracy of the voice recognition algorithm.
+
 ## Make it your own
 
 Do last week’s assignment again, but this time: 
