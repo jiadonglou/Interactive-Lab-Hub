@@ -147,11 +147,10 @@ This describes the second week's work for this lab activity.
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 **Summarize feedback from your partners here.**
-Feedback 1: I actually want to own one of such devices if there's a product like this in the market. I love how practical and convenient the device is that it could not only avoid jeopardy when some bad guy (the storyboard is also super interesting!) knock on the door but also prevent in-person immediate contact during the Covid. The way that the alarm sounds are human voice make the notification clear to the user. One thing I would suggest is that, maybe there could be a indoor version connected with the exterior one so that the homeowner could clearly discern situations outside.
+Feedback 1（xl863）: I actually want to own one of such devices if there's a product like this in the market. I love how practical and convenient the device is that it could not only avoid jeopardy when some bad guy (the storyboard is also super interesting!) knock on the door but also prevent in-person immediate contact during the Covid. The way that the alarm sounds are human voice make the notification clear to the user. One thing I would suggest is that, maybe there could be a indoor version connected with the exterior one so that the homeowner could clearly discern situations outside.
 
 
-Feedback 2:It is pretty cool to prototype the device in different scnearios. It is a smart way to incorporate the light not only as a visual feedback, but also to convey message in different cases. It is also interesting to have different audio for each case.
-
+Feedback 2 （cl773）:It is pretty cool to prototype the device in different scnearios. It is a smart way to incorporate the light not only as a visual feedback, but also to convey message in different cases. It is also interesting to have different audio for each case.
 
 ## Make it your own
 
