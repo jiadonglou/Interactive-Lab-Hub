@@ -162,3 +162,9 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 **Document everything here.**
+Device Name: Contactless Door Lock
+Description: This week's device is a upgrade from last week's device. The apperance of the device has been redesigned so that the display itself is intergrated with the door handle & lock. In addition, a string was attached to the door handle to achieve opening the door automatically. By doing so, the door now is 100% contactless. Homeowner can return to their home without touching anything(password pad, fingerprint sensor, or door handle). This is especially useful during the pandanmic where we want to avoid contacts with anything. Visitors, and package delivery guy can also achieve their goal without touching anything. In the end, the home owner can see a record of door acitivities from their mobile phone.
+New Storyboard:
+![Alt text](storyboard2.jpg?raw=true "Title")
+New Video Prototype:
+https://drive.google.com/file/d/1b5NkOLzjzUXbO2ZX_mkHjPpHIgAgElep/view?usp=sharing
