@@ -103,6 +103,9 @@ You will be using your smartphone as a stand-in for the device you are prototypi
 Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
 
 We invented this tool for this lab! 
+
+If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
+
 **Give us feedback on Tinkerbelle.**
 The sound function doesn't work for me. The sound is played 10 seconds late. I added the sound effect in the video prototype instead.
 
@@ -161,6 +164,7 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
 
+<<<<<<< HEAD
 **Document everything here.**
 Device Name: Contactless Door Lock
 Description: This week's device is a upgrade from last week's device. The apperance of the device has been redesigned so that the display itself is intergrated with the door handle & lock. In addition, a string was attached to the door handle to achieve opening the door automatically. By doing so, the door now is 100% contactless. Homeowner can return to their home without touching anything(password pad, fingerprint sensor, or door handle). This is especially useful during the pandanmic where we want to avoid contacts with anything. Visitors, and package delivery guy can also achieve their goal without touching anything. In the end, the home owner can see a record of door acitivities from their mobile phone.
@@ -168,3 +172,6 @@ New Storyboard:
 ![Alt text](storyboard2.jpg?raw=true "Title")
 New Video Prototype:
 https://drive.google.com/file/d/1b5NkOLzjzUXbO2ZX_mkHjPpHIgAgElep/view?usp=sharing
+=======
+**Document everything here. (Particularly we'd like to see the storyboard and video, although photos of the prototype are also great.)**
+>>>>>>> 2226ae6286232393c4220ed9e64800cb41deedc8
