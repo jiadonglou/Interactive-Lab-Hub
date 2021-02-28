@@ -174,9 +174,9 @@ After that git will ask you to login to your github account to upload.
 
 **Take a video of your PiClock.**
 https://drive.google.com/file/d/1dpSgp_OzEyO55lpKwc0jSMc99Qi7NnN6/view?usp=sharing
+The display is broken.
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-
-
+Add more visuals to the current display. Use another button to set your local timezone to a new one.
 
