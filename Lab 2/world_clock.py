@@ -19,14 +19,14 @@ time_zone_name = {
             "-5":"Pakistan Lahore Time",
             "-4":"Near East Time",
             "-3":"Eastern African Time",
-            "-2":"(Arabic) Egypt Standard Time",
+            "-2":"Egypt Standard Time",
             "-1":"European Central Time",
             "0":"Greenwich Mean Time",
             "1":"Central African Time",
             "2":"Fernando de Noronha Time",
             "3":"Argentina Standard Time",
-            "4":"Puerto Rico and US Virgin Islands Time",
-            "5":"Eastern\nStandard\nTime",
+            "4":"Puerto Rico Time",
+            "5":"Eastern\nStandard Time",
             "6":"Central Standard Time",
             "7":"Phoenix Standard Time",
             "8":"Pacific Standard Time",
@@ -130,8 +130,8 @@ while True:
     WEST = "---------\n WEST |\n---------"
     draw.text((0,5),EAST, font=font, fill = "#FFFFFF")
     draw.text((0,75),WEST,font=font, fill = "#FFFFFF")
-    draw.text((x+100, y+10), NAME, font=font, fill="#FFFFFF")
-    draw.text((x+100, y+75), TIME, font=font, fill="#FFFFFF")
+    draw.text((x+75, y+10), NAME, font=font, fill="#FFFFFF")
+    draw.text((x+75, y+75), TIME, font=font, fill="#FFFFFF")
 
     # Display image.
     disp.image(image, rotation)
