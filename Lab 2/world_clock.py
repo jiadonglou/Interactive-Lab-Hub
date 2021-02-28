@@ -9,30 +9,30 @@ from datetime import datetime
 import pytz 
 
 time_zone_name = {
-            "-12":"New Zealand Standard Time",
-            "-11":"Solomon Standard Time",
-            "-10":"Australia Eastern Time",
-            "-9":"Japan Standard Time",
-            "-8":"China Taiwan Time",
-            "-7":"Vietnam Standard Time",
-            "-6":"Bangladesh Standard Time",
-            "-5":"Pakistan Lahore Time",
-            "-4":"Near East Time",
-            "-3":"Eastern African Time",
-            "-2":"Egypt Standard Time",
-            "-1":"European Central Time",
-            "0":"Greenwich Mean Time",
-            "1":"Central African Time",
-            "2":"Fernando de Noronha Time",
-            "3":"Argentina Standard Time",
-            "4":"Puerto Rico Time",
+            "-12":"New Zealand\nStandard Time",
+            "-11":"Solomon\nStandard Time",
+            "-10":"Australia\nEastern Time",
+            "-9":"Japan\nStandard Time",
+            "-8":"China Taiwan\nTime",
+            "-7":"Vietnam\nStandard Time",
+            "-6":"Bangladesh\nStandard Time",
+            "-5":"Pakistan\nLahore Time",
+            "-4":"Near East\nTime",
+            "-3":"Eastern African\nTime",
+            "-2":"Egypt\nStandard Time",
+            "-1":"European\nCentral Time",
+            "0":"Greenwich\nMean Time",
+            "1":"Central\nAfrican Time",
+            "2":"Fernando de\nNoronha Time",
+            "3":"Argentina\nStandard Time",
+            "4":"Puerto Rico\nTime",
             "5":"Eastern\nStandard Time",
-            "6":"Central Standard Time",
-            "7":"Phoenix Standard Time",
-            "8":"Pacific Standard Time",
-            "9":"Alaska Standard Time",
-            "10":"Hawaii Standard Time",
-            "11":"Midway Islands Time",
+            "6":"Central\nStandard Time",
+            "7":"Phoenix\nStandard Time",
+            "8":"Pacific\nStandard Time",
+            "9":"Alaska\nStandard Time",
+            "10":"Hawaii\nStandard Time",
+            "11":"Midway\nIslands Time",
             }
 
 time_zone_gmt = {
@@ -126,7 +126,9 @@ prevA = False
 prevB = False
 
 while True:
-    if buttonA.value and not prevA:
+    if buttonA.value and buttonB.value:
+        current_tz = 5
+    elif buttonA.value and not prevA:
         if current_tz == -12:
             current_tz = 11
         else:
