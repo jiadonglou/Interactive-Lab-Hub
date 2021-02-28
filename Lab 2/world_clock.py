@@ -131,7 +131,7 @@ while True:
             current_tz = 11
         else:
             current_tz-=1
-    else if buttonB and not prevB:
+    elif buttonB and not prevB:
         if current_tz == 11:
             current_tz = -12
         current_tz+=1
