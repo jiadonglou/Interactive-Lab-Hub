@@ -118,7 +118,26 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
+prevA = False
+prevB = False
+
 while True:
+    if buttonA and not prevA:
+        if current_tz == -12:
+            current_tz = 11
+        else:
+            current_tz-=1
+    else if buttonB and not prevB:
+        if current_tz == 11:
+            current_tz = -12
+        current_tz+=1
+    prevA = buttonA
+    prevB = buttonB
+
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     
@@ -130,8 +149,8 @@ while True:
     WEST = "---------\n WEST |\n---------"
     draw.text((0,5),EAST, font=font, fill = "#FFFFFF")
     draw.text((0,75),WEST,font=font, fill = "#FFFFFF")
-    draw.text((x+75, y+10), NAME, font=font, fill="#FFFFFF")
-    draw.text((x+75, y+75), TIME, font=font, fill="#FFFFFF")
+    draw.text((x+75, y+20), NAME, font=font, fill="#FFFFFF")
+    draw.text((x+100, y+85), TIME, font=font, fill="#FFFFFF")
 
     # Display image.
     disp.image(image, rotation)
