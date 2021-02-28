@@ -70,8 +70,8 @@ while True:
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
     TIME = strftime("%m/%d/%Y \n  %H:%M:%S")
     y=top
-    EAST = "-------\n EAST |\n------"
-    WEST = "-------\n WEST |\n------"
+    EAST = "---------\n EAST |\n---------"
+    WEST = "---------\n WEST |\n---------"
     draw.text((0,30),EAST, font=font, fill = "#FFFFFF")
     draw.text((0,80),WEST,font=font, fill = "#FFFFFF")
     draw.text((x+100, y+75), TIME, font=font, fill="#FFFFFF")
