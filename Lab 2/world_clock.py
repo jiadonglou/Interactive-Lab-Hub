@@ -147,7 +147,7 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     if not buttonA.value:
-        draw.rectangle((0,0,width,height),outline=0,fill = "#006400")
+        draw.rectangle((0,0,width,height),outline=0,fill = "#00FF00")
     elif not buttonB.value:
         draw.rectangle((0,0,width,height),outline=0,fill = "#FF0000")
  
@@ -157,8 +157,8 @@ while True:
     y=top
     EAST = "---------\n EAST |\n---------"
     WEST = "---------\n WEST |\n---------"
-    draw.text((0,5),EAST, font=font, fill = "#FFFFFF")
-    draw.text((0,75),WEST,font=font, fill = "#FFFFFF")
+    draw.text((0,5),EAST, font=font, fill = "#00FF00")
+    draw.text((0,75),WEST,font=font, fill = "#FF0000")
     draw.text((x+75, y+20), NAME, font=font, fill="#FFFFFF")
     draw.text((x+100, y+85), TIME, font=font, fill="#FFFFFF")
 
