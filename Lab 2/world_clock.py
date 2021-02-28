@@ -124,7 +124,7 @@ while True:
     
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
     
-    TIME = datetime.now(pytz.timezone(time_zone_gmt[current_tz])).strftime("%m/%d/%Y \n  %H:%M:%S:%z") 
+    TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)]).strftime("%m/%d/%Y \n  %H:%M:%S:%z") 
     y=top
     EAST = "---------\n EAST |\n---------"
     WEST = "---------\n WEST |\n---------"
