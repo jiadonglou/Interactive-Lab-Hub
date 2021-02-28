@@ -147,7 +147,10 @@ while True:
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     if not buttonA.value:
-        draw.rectangle((0,20,100,100),outline=0,fill = "#006400")
+        draw.rectangle((0,0,width,height),outline=0,fill = "#006400")
+    elif not buttonB.value:
+        draw.rectangle((0,0,width,height),outline=0,fill = "#FF0000")
+ 
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
     NAME = time_zone_name[str(current_tz)] + "\n"
     TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%m/%d/%Y \n  %H:%M:%S") 
