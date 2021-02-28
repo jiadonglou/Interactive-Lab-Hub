@@ -5,9 +5,66 @@ import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
 from time import strftime, sleep
+from datetime import datetime
+import pytz 
 
-#time_zone = {}
+time_zone_name = {
+            "-12":"New Zealand Standard Time",
+            "-11":"Solomon Standard Time",
+            "-10":"Australia Eastern Time",
+            "-9":"Japan Standard Time",
+            "-8":"China Taiwan Time",
+            "-7":"Vietnam Standard Time",
+            "-6":"Bangladesh Standard Time",
+            "-5":"Pakistan Lahore Time",
+            "-4":"Near East Time",
+            "-3":"Eastern African Time",
+            "-2":"(Arabic) Egypt Standard Time",
+            "-1":"European Central Time",
+            "0":"Greenwich Mean Time",
+            "1":"Central African Time",
+            "2":"Fernando de Noronha Time",
+            "3":"Argentina Standard Time",
+            "4":"Puerto Rico and US Virgin Islands Time",
+            "5":"Eastern Standard Time",
+            "6":"Central Standard Time",
+            "7":"Phoenix Standard Time",
+            "8":"Pacific Standard Time",
+            "9":"Alaska Standard Time",
+            "10":"Hawaii Standard Time",
+            "11":"Midway Islands Time",
+            }
 
+time_zone_gmt = {
+    time_zone = {
+            "-12":"Etc/GMT-12",
+            "-11":"Etc/GMT-11",
+            "-10":"Etc/GMT-10",
+            "-9":"Etc/GMT-9",
+            "-8":"Etc/GMT-8",
+            "-7":"Etc/GMT-7",
+            "-6":"Etc/GMT-6",
+            "-5":"Etc/GMT-5",
+            "-4":"Etc/GMT-4",
+            "-3":"Etc/GMT-3",
+            "-2":"Etc/GMT-2",
+            "-1":"Etc/GMT-1",
+            "0":"Etc/GMT0",
+            "1":"Etc/GMT+1",         
+            "2":"Etc/GMT+2",
+            "3":"Etc/GMT+3",
+            "4":"Etc/GMT+4",
+            "5":"Etc/GMT+5",
+            "6":"Etc/GMT+6",
+            "7":"Etc/GMT+7",
+            "8":"Etc/GMT+8",
+            "9":"Etc/GMT+9",
+            "10":"Etc/GMT+10",
+            "11":"Etc/GMT+11",
+            }
+}
+
+current_tz = 5
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
 dc_pin = digitalio.DigitalInOut(board.D25)
@@ -68,11 +125,12 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
-    TIME = strftime("%m/%d/%Y \n  %H:%M:%S")
+    
+    TIME = datetime.now(pytz.timezone(time_zone_gmt[current_tz])).strftime("%m/%d/%Y \n  %H:%M:%S:%z") 
     y=top
     EAST = "---------\n EAST |\n---------"
     WEST = "---------\n WEST |\n---------"
-    draw.text((0,10),EAST, font=font, fill = "#FFFFFF")
+    draw.text((0,5),EAST, font=font, fill = "#FFFFFF")
     draw.text((0,75),WEST,font=font, fill = "#FFFFFF")
     draw.text((x+100, y+75), TIME, font=font, fill="#FFFFFF")
 
