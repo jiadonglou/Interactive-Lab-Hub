@@ -26,7 +26,7 @@ time_zone_name = {
             "2":"Fernando de Noronha Time",
             "3":"Argentina Standard Time",
             "4":"Puerto Rico and US Virgin Islands Time",
-            "5":"Eastern Standard Time",
+            "5":"Eastern\nStandard\nTime",
             "6":"Central Standard Time",
             "7":"Phoenix Standard Time",
             "8":"Pacific Standard Time",
