@@ -72,8 +72,8 @@ while True:
     y=top
     EAST = "---------\n EAST |\n---------"
     WEST = "---------\n WEST |\n---------"
-    draw.text((0,30),EAST, font=font, fill = "#FFFFFF")
-    draw.text((0,80),WEST,font=font, fill = "#FFFFFF")
+    draw.text((0,25),EAST, font=font, fill = "#FFFFFF")
+    draw.text((0,75),WEST,font=font, fill = "#FFFFFF")
     draw.text((x+100, y+75), TIME, font=font, fill="#FFFFFF")
 
     # Display image.
