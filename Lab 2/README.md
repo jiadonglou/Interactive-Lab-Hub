@@ -156,7 +156,7 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 **A copy of your code should be in your Lab 2 Github repo.**
 
 World PiClock
-![Alt text](worldclock.jpg?raw=true "Title")
+![Alt text](worldclock.png?raw=true "Title")
 Browse the current time in every timezone in the world. Starting from Eastern Time, you can press button to change timezone in East Direction or West Direction. You can always comeback to Eastern Time by pressing both buttons together. 
 https://github.com/jiadonglou/Interactive-Lab-Hub/blob/Spring2021/Lab%202/world_clock.py
 you can push to your personal github repo by adding the files here, commiting and pushing.
