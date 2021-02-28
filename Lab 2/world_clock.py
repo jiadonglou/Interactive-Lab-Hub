@@ -122,17 +122,19 @@ buttonA = digitalio.DigitalInOut(board.D23)
 buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
-prevA = False
-prevB = False
+prevA = True
+prevB = True
 
 while True:
-    if buttonA.value and not prevA:
+    if not buttonA.value and not buttonB.value:
+        current_tz = 5
+    elif not buttonA.value and prevA:
         if current_tz == -12:
             current_tz = 11
         else:
             current_tz-=1
         prevA = buttonA.value
-    elif buttonB.value and not prevB:
+    elif not buttonB.value and prevB:
         if current_tz == 11:
             current_tz = -12
         else:
