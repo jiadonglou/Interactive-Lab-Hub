@@ -126,17 +126,17 @@ prevA = False
 prevB = False
 
 while True:
-    if buttonA and not prevA:
+    if buttonA.value and not prevA:
         if current_tz == -12:
             current_tz = 11
         else:
             current_tz-=1
-    elif buttonB and not prevB:
+    elif buttonB.value and not prevB:
         if current_tz == 11:
             current_tz = -12
         current_tz+=1
-    prevA = buttonA
-    prevB = buttonB
+    prevA = buttonA.value
+    prevB = buttonB.value
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
