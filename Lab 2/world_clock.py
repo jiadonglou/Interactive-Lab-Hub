@@ -126,9 +126,7 @@ prevA = False
 prevB = False
 
 while True:
-    if buttonA.value and buttonB.value:
-        current_tz = 5
-    elif buttonA.value and not prevA:
+    if buttonA.value and not prevA:
         if current_tz == -12:
             current_tz = 11
         else:
@@ -142,10 +140,13 @@ while True:
         prevB = buttonB.value
     prevA = buttonA.value
     prevB = buttonB.value
+    
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    
+    if buttonA.value:
+        buttonColor = color565(*list(webcolors.name_to_rgb("green")))
+        draw.rectangle((0,5,20,20),outline=0,fill = buttonColor)
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
     NAME = time_zone_name[str(current_tz)] + "\n"
     TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%m/%d/%Y \n  %H:%M:%S") 
