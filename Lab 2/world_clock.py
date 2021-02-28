@@ -36,7 +36,6 @@ time_zone_name = {
             }
 
 time_zone_gmt = {
-    time_zone = {
             "-12":"Etc/GMT-12",
             "-11":"Etc/GMT-11",
             "-10":"Etc/GMT-10",
@@ -61,7 +60,6 @@ time_zone_gmt = {
             "9":"Etc/GMT+9",
             "10":"Etc/GMT+10",
             "11":"Etc/GMT+11",
-            }
 }
 
 current_tz = 5
