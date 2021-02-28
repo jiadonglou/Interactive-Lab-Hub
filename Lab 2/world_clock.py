@@ -131,10 +131,13 @@ while True:
             current_tz = 11
         else:
             current_tz-=1
+        prevA = buttonA.value
     elif buttonB.value and not prevB:
         if current_tz == 11:
             current_tz = -12
-        current_tz+=1
+        else:
+            current_tz+=1
+        prevB = buttonB.value
     prevA = buttonA.value
     prevB = buttonB.value
 
