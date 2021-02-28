@@ -159,7 +159,7 @@ while True:
     WEST = "---------\n WEST |\n---------"
     draw.text((0,5),EAST, font=font, fill = "#00FF00")
     draw.text((0,75),WEST,font=font, fill = "#FF0000")
-    draw.text((x+75, y+20), NAME, font=font, fill="#FFFFFF")
+    draw.text((x+85, y+20), NAME, font=font, fill="#FFFFFF")
     draw.text((x+100, y+85), TIME, font=font, fill="#FFFFFF")
 
     # Display image.
