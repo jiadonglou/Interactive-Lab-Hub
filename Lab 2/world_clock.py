@@ -126,8 +126,9 @@ prevA = False
 prevB = False
 
 while True:
-
-    if buttonA.value and not prevA:
+    if buttonA.value and buttonB.value:
+        current_tz = 5
+    elif buttonA.value and not prevA:
         if current_tz == -12:
             current_tz = 11
         else:
