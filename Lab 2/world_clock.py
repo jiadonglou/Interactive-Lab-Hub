@@ -171,7 +171,7 @@ while True:
     
 
     # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    #draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
     if not buttonA.value:
         draw.rectangle((0,0,width,height),outline=0,fill = "#00FF00")
