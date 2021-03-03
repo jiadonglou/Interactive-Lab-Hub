@@ -148,7 +148,9 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
-
+background = Image.open("8.jpeg")
+background = ScaleImage(background)
+draw = ImageDraw.Draw(background)
 while True:
     if not buttonA.value and not buttonB.value:
         current_tz = 5
@@ -170,10 +172,6 @@ while True:
 
     # Draw a black filled box to clear the image.
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    background = Image.open("8.jpeg")
-    #background = background.convert('RGB').resize((240, 135), Image.BICUBIC)
-    background = ScaleImage(background)
-    draw = ImageDraw.Draw(background)
 
     if not buttonA.value:
         draw.rectangle((0,0,width,height),outline=0,fill = "#00FF00")
