@@ -167,7 +167,7 @@ while True:
     background = Image.open("red.jpg")
     #background = background.convert('RGB').resize((240, 135), Image.BICUBIC)
     background = ScaleImage(background)
-    #draw = ImageDraw.Draw(background)
+    draw = ImageDraw.Draw(background)
 
     if not buttonA.value:
         draw.rectangle((0,0,width,height),outline=0,fill = "#00FF00")
@@ -187,5 +187,5 @@ while True:
 
     # Display image.
     disp.image(background)
-    disp.image(image, rotation)
+    #disp.image(image, rotation)
     #time.sleep(1)
