@@ -188,6 +188,6 @@ while True:
     draw.text((x+100, y+85), TIME, font=font, fill="#FFFFFF")
 
     # Display image.
-    disp.image(background)
+    disp.image(background,rotation)
     #disp.image(image, rotation)
     #time.sleep(1)
