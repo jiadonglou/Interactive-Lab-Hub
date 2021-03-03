@@ -89,6 +89,8 @@ disp = st7789.ST7789(
 
 def ScaleImage(image):
 # Scale the image to the smaller screen dimension
+	width = 135
+	height = 240
 	image_ratio = image.width / image.height
 	screen_ratio = width / height
 	if screen_ratio < image_ratio:
