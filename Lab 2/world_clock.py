@@ -171,7 +171,7 @@ while True:
 
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     background = Image.open("8.jpeg")
-	background = ScaleImage(background)
+    background = ScaleImage(background)
 	draw = ImageDraw.Draw(background)
 
     if not buttonA.value:
