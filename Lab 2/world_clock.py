@@ -170,7 +170,7 @@ while True:
     # Draw a black filled box to clear the image.
 
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-	background = Image.open("8.jpeg")
+    background = Image.open("8.jpeg")
 	background = ScaleImage(background)
 	draw = ImageDraw.Draw(background)
 
