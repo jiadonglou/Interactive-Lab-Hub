@@ -150,7 +150,7 @@ prevA = True
 prevB = True
 background = Image.open("8.jpeg")
 background = ScaleImage(background)
-draw = ImageDraw.Draw(background)
+
 while True:
     if not buttonA.value and not buttonB.value:
         current_tz = 5
@@ -169,7 +169,7 @@ while True:
     prevA = buttonA.value
     prevB = buttonB.value
     
-
+	draw = ImageDraw.Draw(background)
     # Draw a black filled box to clear the image.
     #draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
