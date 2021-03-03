@@ -162,7 +162,7 @@ while True:
     draw.text((x+100, y+20), NAME, font=font, fill="#FFFFFF")
     draw.text((x+100, y+85), TIME, font=font, fill="#FFFFFF")
 
-    background = Image.open("/images/"+"8"+".jpeg")
+    background = Image.open("8.jpeg")
     background = background.convert('RGB').resize((240, 135), Image.BICUBIC)
     draw = ImageDraw.Draw(background)
     disp.image(background)
