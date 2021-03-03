@@ -179,4 +179,7 @@ The display is broken.
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 Add more visuals to the current display. Use another button to set your local timezone to a new one.
+![Alt text](sketch.jpeg?raw=true "Title")
 
+
+William Zhang: It's really cool that you have all the timezone included in the device. Also the interaction is very intuiative. However, personally I think you can work more on the interface design. Try adding some pictures to the UI.
