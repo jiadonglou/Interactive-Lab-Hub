@@ -91,6 +91,10 @@ def ScaleImage(image):
 # Scale the image to the smaller screen dimension
 	width = 135
 	height = 240
+
+	image = image.convert('RGB')
+    image = image.resize((240, 135), Image.BICUBIC)
+
 	image_ratio = image.width / image.height
 	screen_ratio = width / height
 	if screen_ratio < image_ratio:
