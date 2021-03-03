@@ -183,3 +183,5 @@ Add more visuals to the current display. Use another button to set your local ti
 
 
 William Zhang: It's really cool that you have all the timezone included in the device. Also the interaction is very intuiative. However, personally I think you can work more on the interface design. Try adding some pictures to the UI.
+
+Chelsea Luo:I think it is a briliant idea to use time zones to design a clock. I like the visusal text indication to highlight the usage of the buttons. Overall, really great design and it is a good idea to have a set function.
