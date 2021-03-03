@@ -168,10 +168,10 @@ while True:
         prevB = buttonB.value
     prevA = buttonA.value
     prevB = buttonB.value
-    draw = ImageDraw.Draw(background)
-    # Draw a black filled box to clear the image.
-    #draw.rectangle((0, 0, width, height), outline=0, fill=0)
 
+    # Draw a black filled box to clear the image.
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw = ImageDraw.Draw(background)
     if not buttonA.value:
         draw.rectangle((0,0,width,height),outline=0,fill = "#00FF00")
     elif not buttonB.value:
