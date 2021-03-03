@@ -184,7 +184,6 @@ while True:
     background = background.convert('RGB').resize((240, 135), Image.BICUBIC)
     background = ScaleImage(background)
     draw = ImageDraw.Draw(background)
-    disp.image(background)
     # Display image.
     disp.image(image, rotation)
     #time.sleep(1)
