@@ -91,8 +91,6 @@ def ScaleImage(image):
 # Scale the image to the smaller screen dimension
 	width = 135
 	height = 240
-	image = image.convert('RGB')
-	image = image.resize((240, 135),Image.BICUBIC)
 
 	image_ratio = image.width / image.height
 	screen_ratio = width / height
@@ -108,6 +106,9 @@ def ScaleImage(image):
 	x = scaled_width // 2 - width // 2
 	y = scaled_height // 2 - height // 2
 	image = image.crop((x, y, x + width, y + height))
+
+	image = image.convert('RGB')
+	image = image.resize((240, 135),Image.BICUBIC)
 	return image
 
 # Create blank image for drawing.
