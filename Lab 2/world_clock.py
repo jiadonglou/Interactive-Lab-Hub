@@ -170,7 +170,7 @@ while True:
     # Draw a black filled box to clear the image.
 
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    img_name = str(current_tz)+ "day"+".jpeg"
+    img_name = str(current_tz)+ "day"+".jpg"
     background = Image.open(img_name)
     background = ScaleImage(background)
     draw = ImageDraw.Draw(background)
