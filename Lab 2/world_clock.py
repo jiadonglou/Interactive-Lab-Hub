@@ -168,9 +168,16 @@ while True:
     prevB = buttonB.value
 
     # Draw a black filled box to clear the image.
+    NAME = time_zone_name[str(current_tz)] + "\n"
+    TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%m/%d/%Y \n  %H:%M:%S") 
+    HOUR = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%H")
+    HOUR = int(HOUR)
+    DAYNIGHT = "day"
+    if HOUR >= 19 or HOUR <7:
+    	DAYNIGHT = "night"
 
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
-    img_name = "/images/"+str(current_tz)+ "day"+".jpg"
+    img_name = str(current_tz)+ DAYNIGHT+".jpg"
     background = Image.open(img_name)
     background = ScaleImage(background)
     draw = ImageDraw.Draw(background)
@@ -181,8 +188,7 @@ while True:
         draw.rectangle((0,0,width,height),outline=0,fill = "#FF0000")
  
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
-    NAME = time_zone_name[str(current_tz)] + "\n"
-    TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%m/%d/%Y \n  %H:%M:%S") 
+
     y=top
     EAST = "---------\n EAST |\n---------"
     WEST = "---------\n WEST |\n---------"
