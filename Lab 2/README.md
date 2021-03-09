@@ -190,6 +190,10 @@ Add more visuals to the current display. Use another button to set your local ti
 1. Pick up remaining parts for kit.
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+3. 
+William Zhang: It's really cool that you have all the timezone included in the device. Also the interaction is very intuiative. However, personally I think you can work more on the interface design. Try adding some pictures to the UI.
+
+Chelsea Luo:I think it is a briliant idea to use time zones to design a clock. I like the visusal text indication to highlight the usage of the buttons. Overall, really great design and it is a good idea to have a set function.
 
 # Lab 2 Part 2
 
@@ -201,6 +205,6 @@ As always, make sure you document contributions and ideas from others explicitly
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
-William Zhang: It's really cool that you have all the timezone included in the device. Also the interaction is very intuiative. However, personally I think you can work more on the interface design. Try adding some pictures to the UI.
+For Part 2, I update the visual interface for my clock. A background image of the iconic city in each time zone is added. In addition, background image in each time zone has two versions, one with daytime picture and one with nighttime picture. When you browse through different timezone, the image will reflect if it's daytime or nighttime at local time zone. Therefore, opening the clock at different times will give you different results(images) because some time zones are in nighttime and some are in daytime.
 
-Chelsea Luo:I think it is a briliant idea to use time zones to design a clock. I like the visusal text indication to highlight the usage of the buttons. Overall, really great design and it is a good idea to have a set function.
+https://drive.google.com/file/d/1lfxCwFUi8x5F7KvMT0o7THkibJyH2mZ_/view?usp=sharing
