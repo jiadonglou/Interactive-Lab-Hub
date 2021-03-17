@@ -116,8 +116,8 @@ def Speech2Text():
             print(rec.Result())
         else:
             print(rec.PartialResult())
-    print(rec.FinalResult["text"])
-    return rec.FinalResult["text"]
+    print(rec.FinalResult()["text"])
+    return rec.FinalResult()["text"]
 
 def ScaleImage(image):
 # Scale the image to the smaller screen dimension
