@@ -112,12 +112,12 @@ def Speech2Text():
         data = wf.readframes(4000)
         if len(data) == 0:
             break
-        #if rec.AcceptWaveform(data):
-            #print(rec.Result())
-        #else:
-            #print(rec.PartialResult())
-    print(rec.FinalResult()[1])
-    #return rec.FinalResult()[0]["text"]
+        if rec.AcceptWaveform(data):
+            print(rec.Result())
+        else:
+            print(rec.PartialResult())
+    print(rec.FinalResult()[0])
+    return rec.FinalResult()[0]["text"]
 
 def ScaleImage(image):
 # Scale the image to the smaller screen dimension
