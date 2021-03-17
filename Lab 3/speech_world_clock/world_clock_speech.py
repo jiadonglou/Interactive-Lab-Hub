@@ -107,7 +107,7 @@ def Speech2Text():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "east west shanghai tokyo")
+    rec = KaldiRecognizer(model, wf.getframerate(), "east west day night shanghai tokyo")
 
     while True:
         data = wf.readframes(4000)
@@ -205,6 +205,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
+DAYNIGHTFORCE = False
 prevButton = False
 speechInput = False
 while True:
@@ -236,6 +237,12 @@ while True:
                 current_tz = -12
             else:
                 current_tz+=1  
+        elif text == "day":
+            DAYNIGHTFORCE = True
+            DAYNIGHT = "day"
+        elif text == "night":
+            DAYNIGHTFORCE = True
+            DAYNIGHT = "night"
         elif text == "shanghai":
             current_tz = -8
         elif text == "tokyo":
@@ -265,9 +272,11 @@ while True:
     TIME = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%m/%d/%Y \n  %H:%M:%S") 
     HOUR = datetime.now(pytz.timezone(time_zone_gmt[str(current_tz)])).strftime("%H")
     HOUR = int(HOUR)
-    DAYNIGHT = "day"
-    if HOUR >= 19 or HOUR <7:
-    	DAYNIGHT = "night"
+
+    if not DAYNIGHTFORCE:
+        DAYNIGHT = "day"
+        if HOUR >= 19 or HOUR <7:
+        	DAYNIGHT = "night"
 
     draw.rectangle((0, 0, width, height), outline=0, fill=0)
     img_name = str(current_tz)+ DAYNIGHT+".jpg"
