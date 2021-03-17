@@ -213,7 +213,7 @@ while True:
 
     if button.status.is_pressed:
         button.led_bright = 100
-        if !prevButton:
+        if not prevButton:
             process = subprocess.Popen(["arecord", "-D", "hw:2,0", "-d", "5", "-f", "cd", "recording.wav", "-c", "1"])
             prevButton = True
     else:
