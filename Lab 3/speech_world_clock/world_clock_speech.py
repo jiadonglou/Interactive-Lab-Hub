@@ -227,7 +227,15 @@ while True:
         speechInput = False
         text = Speech2Text()
         if text == "west":
-            current_tz = 1
+            if current_tz == -12:
+                current_tz = 11
+            else:
+                current_tz-=1
+        else:
+            if current_tz == 11:
+                current_tz = -12
+            else:
+                current_tz+=1            
 
     if not buttonA.value and not buttonB.value:
         current_tz = 5
