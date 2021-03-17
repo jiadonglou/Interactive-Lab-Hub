@@ -7,6 +7,10 @@ import adafruit_rgb_display.st7789 as st7789
 from time import strftime, sleep
 from datetime import datetime
 import pytz 
+
+import board
+import busio
+from adafruit_bus_device.i2c_device import I2CDevice
 from i2c_button import I2C_Button
 
 time_zone_name = {
