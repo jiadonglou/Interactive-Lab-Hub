@@ -27,4 +27,5 @@ while True:
     else:
         print(rec.PartialResult())
 
-print(rec.FinalResult()[1])
+res = json.loads(rec.FinalResult())
+print (res['text'])
