@@ -107,7 +107,7 @@ def Speech2Text():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "east west day night shanghai tokyo")
+    rec = KaldiRecognizer(model, wf.getframerate(), "east west day night shanghai paris newyork")
 
     while True:
         data = wf.readframes(4000)
