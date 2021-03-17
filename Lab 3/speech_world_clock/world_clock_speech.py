@@ -107,7 +107,7 @@ def Speech2Text():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "east west")
+    rec = KaldiRecognizer(model, wf.getframerate(), "east west beijing")
 
     while True:
         data = wf.readframes(4000)
@@ -226,7 +226,7 @@ while True:
     if speechInput:
         speechInput = False
         text = Speech2Text()
-        if text == "west":
+        if text == "east":
             if current_tz == -12:
                 current_tz = 11
             else:
