@@ -107,7 +107,7 @@ def Speech2Text():
 
     model = Model("model")
     # You can also specify the possible word list
-    rec = KaldiRecognizer(model, wf.getframerate(), "east west zero oh one two three four five six seven eight nine [unk]")
+    rec = KaldiRecognizer(model, wf.getframerate(), "east west")
 
     while True:
         data = wf.readframes(4000)
@@ -118,8 +118,8 @@ def Speech2Text():
         else:
             print(rec.PartialResult())
     res = json.loads(rec.FinalResult())
-    print (res['text'])
-    #return rec.FinalResult()[0]["text"]
+    print ("Speech2Text: "+ res['text'])
+    return res['text']
 
 def ScaleImage(image):
 # Scale the image to the smaller screen dimension
@@ -168,7 +168,6 @@ button.led_bright = 0
 button.led_gran = 1
 button.led_cycle_ms = 0
 button.led_off_ms = 0
-Speech2Text()
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
 height = disp.width  # we swap height/width to rotate it to landscape!
@@ -206,8 +205,11 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
-
+if Speech2Text() == "East":
+    current_tz = 1
 while True:
+
+
     button.clear()
     time.sleep(1)
     if button.status.is_pressed:
