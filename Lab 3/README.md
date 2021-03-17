@@ -1,4 +1,4 @@
-# You're a wizard, [Student Name Here]
+# You're a wizard, Jiadong Lou
 
 <img src="https://pbs.twimg.com/media/Cen7qkHWIAAdKsB.jpg" height="400">
 
@@ -67,10 +67,12 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 ## Prep for Part 2
 
 1. Sketch ideas for what you'll work on in lab on Wednesday.
+![Alt text](sketch.jpg?raw=true "Title")
 
 ## Share your idea sketches with Zoom Room mates and get feedback
 
 *what was the feedback? Who did it come from?*
+Chelsea Luo (cl773): I think it is awesome extension of your previous lab’s work. It would be good to add another sensor to reset the system — like a button or joystick.
 
 ## Prototype your system
 
