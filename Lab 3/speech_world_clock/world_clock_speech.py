@@ -208,6 +208,7 @@ prevB = True
 DAYNIGHTFORCE = False
 prevButton = False
 speechInput = False
+prev_tz = current_tz
 while True:
     button.clear()
     time.sleep(1)
@@ -264,6 +265,10 @@ while True:
         else:
             current_tz+=1
         prevB = buttonB.value
+
+    if prev_tz != current_tz:
+        DAYNIGHTFORCE = False
+        prev_tz = current_tz
     prevA = buttonA.value
     prevB = buttonB.value
 
