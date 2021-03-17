@@ -101,8 +101,8 @@ disp = st7789.ST7789(
 def Speech2Text():
     wf = wave.open(sys.argv[1], "rb")
     if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
-    print ("Audio file must be WAV format mono PCM.")
-    exit (1)
+        print ("Audio file must be WAV format mono PCM.")
+        exit (1)
 
     model = Model("model")
     # You can also specify the possible word list
