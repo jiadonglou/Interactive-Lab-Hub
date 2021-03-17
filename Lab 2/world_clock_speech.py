@@ -137,6 +137,7 @@ button.led_gran = 1
 button.led_cycle_ms = 0
 button.led_off_ms = 0
 button.clear()
+time.sleep(1)
 if button.status.is_pressed:
     button.led_bright = 100
 
