@@ -116,7 +116,7 @@ def Speech2Text():
             #print(rec.Result())
         #else:
             #print(rec.PartialResult())
-    print(rec.FinalResult())
+    print(rec.FinalResult()[1])
     #return rec.FinalResult()[0]["text"]
 
 def ScaleImage(image):
