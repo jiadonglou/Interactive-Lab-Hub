@@ -136,7 +136,7 @@ button.led_bright = 0
 button.led_gran = 1
 button.led_cycle_ms = 0
 button.led_off_ms = 0
-if button.is_pressed:
+if button.isPressed():
     button.led_bright = 100
 
 # Create blank image for drawing.
