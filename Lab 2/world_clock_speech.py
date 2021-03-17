@@ -118,16 +118,17 @@ def ScaleImage(image):
 	return image
 
 
+# Try to create an I2C device
 i2c = busio.I2C(board.SCL, board.SDA)
-button = I2C_Button(i2c)
+print("I2C ok!")
+# ids = '\n'.join(map(str,i2c.scan()))
+# print(f"I2C device ID's found:\n{ids}")
+ 
 while not i2c.try_lock():
     pass
-# Find the first I2C device available.
-devices = i2c.scan()
-while len(devices) < 1:
-    devices = i2c.scan()
-device = devices[0]
-print(f"Found device with address: {hex(device)}")
+ 
+print("I2C addresses found:", [hex(device_address) for device_address in i2c.scan()])
+i2c.unlock()
 
 # initialize the button
 button = I2C_Button(i2c)
