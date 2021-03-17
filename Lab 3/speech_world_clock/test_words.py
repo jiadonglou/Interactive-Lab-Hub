@@ -27,4 +27,4 @@ while True:
     else:
         print(rec.PartialResult())
 
-print(rec.FinalResult()[1])
+print(rec.FinalResult()["text"])
