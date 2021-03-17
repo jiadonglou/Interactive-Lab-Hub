@@ -231,11 +231,17 @@ while True:
                 current_tz = 11
             else:
                 current_tz-=1
-        else:
+        elif text == "west":
             if current_tz == 11:
                 current_tz = -12
             else:
-                current_tz+=1            
+                current_tz+=1  
+        elif text == "shanghai":
+            current_tz = -8
+        elif text == "tokyo":
+            current_tz = -9   
+        elif text == "newyork":
+            current_tz = 5          
 
     if not buttonA.value and not buttonB.value:
         current_tz = 5
