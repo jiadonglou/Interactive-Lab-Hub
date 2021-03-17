@@ -133,7 +133,8 @@ i2c.unlock()
 # initialize the button
 button = I2C_Button(i2c)
 button.led_bright = 0
-if button.value:
+print(button.status)
+if button.status:
     button.led_bright = 100
 
 # Create blank image for drawing.
