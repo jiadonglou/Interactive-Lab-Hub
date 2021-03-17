@@ -7,6 +7,7 @@ import adafruit_rgb_display.st7789 as st7789
 from time import strftime, sleep
 from datetime import datetime
 import pytz 
+from i2c_button import I2C_Button
 
 time_zone_name = {
             "-12":"New Zealand\nStandard Time",
@@ -62,6 +63,7 @@ time_zone_gmt = {
             "11":"Etc/GMT+11",
 }
 
+
 current_tz = 5
 # Configuration for CS and DC pins (these are FeatherWing defaults on M0/M4):
 cs_pin = digitalio.DigitalInOut(board.CE0)
@@ -110,6 +112,25 @@ def ScaleImage(image):
 	image = image.convert('RGB')
 	image = image.resize((240, 135),Image.BICUBIC)
 	return image
+
+
+i2c = busio.I2C(board.SCL, board.SDA)
+button = I2C_Button(i2c)
+while not i2c.try_lock():
+    pass
+# Find the first I2C device available.
+devices = i2c.scan()
+while len(devices) < 1:
+    devices = i2c.scan()
+device = devices[0]
+print(f"Found device with address: {hex(device)}")
+
+# initialize the button
+button = I2C_Button(i2c)
+button.led_bright = 100
+button.led_gran = 1
+button.led_cycle_ms = 2000
+button.led_off_ms = 100
 
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
