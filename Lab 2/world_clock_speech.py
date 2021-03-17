@@ -136,10 +136,6 @@ button.led_bright = 0
 button.led_gran = 1
 button.led_cycle_ms = 0
 button.led_off_ms = 0
-button.clear()
-time.sleep(1)
-if button.status.is_pressed:
-    button.led_bright = 100
 
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
@@ -180,6 +176,11 @@ prevA = True
 prevB = True
 
 while True:
+    button.clear()
+    time.sleep(1)
+    if button.status.is_pressed:
+        button.led_bright = 100
+
     if not buttonA.value and not buttonB.value:
         current_tz = 5
     elif not buttonA.value and prevA:
