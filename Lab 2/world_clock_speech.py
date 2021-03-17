@@ -177,9 +177,10 @@ prevB = True
 
 while True:
     button.clear()
-    time.sleep(1)
     if button.status.is_pressed:
         button.led_bright = 100
+    else:
+        button.led_bright = 0
 
     if not buttonA.value and not buttonB.value:
         current_tz = 5
