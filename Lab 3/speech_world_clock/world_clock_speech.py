@@ -13,6 +13,11 @@ import busio
 from adafruit_bus_device.i2c_device import I2CDevice
 from i2c_button import I2C_Button
 
+from vosk import Model, KaldiRecognizer
+import sys
+import os
+import wave
+
 time_zone_name = {
             "-12":"New Zealand\nStandard Time",
             "-11":"Solomon\nStandard Time",
@@ -93,6 +98,27 @@ disp = st7789.ST7789(
     y_offset=40,
 )
 
+def Speech2Text():
+    wf = wave.open(sys.argv[1], "rb")
+    if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
+    print ("Audio file must be WAV format mono PCM.")
+    exit (1)
+
+    model = Model("model")
+    # You can also specify the possible word list
+    rec = KaldiRecognizer(model, wf.getframerate(), "east west zero oh one two three four five six seven eight nine [unk]")
+
+    while True:
+        data = wf.readframes(4000)
+        if len(data) == 0:
+            break
+        if rec.AcceptWaveform(data):
+            print(rec.Result())
+        else:
+            print(rec.PartialResult())
+    print(rec.FinalResult["text"])
+    return rec.FinalResult["text"]
+
 def ScaleImage(image):
 # Scale the image to the smaller screen dimension
 	width = 135
@@ -118,6 +144,10 @@ def ScaleImage(image):
 	return image
 
 
+if not os.path.exists("model"):
+    print ("Please download the model from https://github.com/alphacep/vosk-api/blob/master/doc/models.md and unpack as 'model' in the current folder.")
+    exit (1)
+
 # Try to create an I2C device
 i2c = busio.I2C(board.SCL, board.SDA)
 print("I2C ok!")
@@ -136,7 +166,7 @@ button.led_bright = 0
 button.led_gran = 1
 button.led_cycle_ms = 0
 button.led_off_ms = 0
-
+Speech2Text()
 # Create blank image for drawing.
 # Make sure to create image with mode 'RGB' for full color.
 height = disp.width  # we swap height/width to rotate it to landscape!
