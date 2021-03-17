@@ -177,7 +177,7 @@ prevB = True
 
 while True:
     button.clear()
-    time.sleep(0.5)
+    time.sleep(1)
     if button.status.is_pressed:
         button.led_bright = 100
     else:
