@@ -18,7 +18,7 @@ import sys
 import os
 import wave
 import json
-
+import subprocess
 time_zone_name = {
             "-12":"New Zealand\nStandard Time",
             "-11":"Solomon\nStandard Time",
@@ -100,7 +100,7 @@ disp = st7789.ST7789(
 )
 
 def Speech2Text():
-    wf = wave.open(sys.argv[1], "rb")
+    wf = wave.open("recording.wav", "rb")
     if wf.getnchannels() != 1 or wf.getsampwidth() != 2 or wf.getcomptype() != "NONE":
         print ("Audio file must be WAV format mono PCM.")
         exit (1)
@@ -205,17 +205,29 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
-if Speech2Text() == "east":
-    current_tz = 1
+prevButton = False
+speechInput = False
 while True:
-
-
     button.clear()
     time.sleep(1)
+
     if button.status.is_pressed:
         button.led_bright = 100
+        if !prevButton:
+            process = subprocess.Popen(["arecord", "-D", "hw:2,0", "-d", "5", "-f", "cd", "recording.wav", "-c", "1"])
+            prevButton = True
     else:
         button.led_bright = 0
+        if prevButton:
+            process.kill()
+            prevButton = False
+            speechInput = True
+
+    if speechInput:
+        speechInput = False
+        text = Speech2Text()
+        if text == "west":
+            current_tz = 1
 
     if not buttonA.value and not buttonB.value:
         current_tz = 5
