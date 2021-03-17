@@ -17,6 +17,7 @@ from vosk import Model, KaldiRecognizer
 import sys
 import os
 import wave
+import json
 
 time_zone_name = {
             "-12":"New Zealand\nStandard Time",
