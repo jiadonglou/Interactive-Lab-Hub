@@ -205,7 +205,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
-if Speech2Text() == "East":
+if Speech2Text() == "east":
     current_tz = 1
 while True:
 
