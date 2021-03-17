@@ -133,6 +133,9 @@ i2c.unlock()
 # initialize the button
 button = I2C_Button(i2c)
 button.led_bright = 0
+button.led_gran = 1
+button.led_cycle_ms = 0
+button.led_off_ms = 0
 print(button.status)
 if button.status:
     button.led_bright = 100
