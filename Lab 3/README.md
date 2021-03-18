@@ -72,6 +72,7 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 ## Share your idea sketches with Zoom Room mates and get feedback
 
 *what was the feedback? Who did it come from?*
+
 Chelsea Luo (cl773): I think it is awesome extension of your previous lab’s work. It would be good to add another sensor to reset the system — like a button or joystick.
 
 ## Prototype your system
