@@ -83,7 +83,24 @@ The system should:
 
 *Document how the system works*
 
+![Alt text](device.jpg?raw=true "Title")
+Lab 3 is built based on my Lab 2 code.
+
+Lab 2 Recap:
+For the previous lab, I developed a interactive device that shows current time in different timezones. User can use buttons on the display to switch time zone toward "East" or "West". The background images is displayed for each timezone (with Day Picture or Night Picture depending on local time).
+
+Lab 3 Improvement:
+For this week's lab, I implemented the voice recognition algorithm to the exisiting device. A mini USB microphone and QWIIC button are used to record the voice input. When the user press the QWIIC button and hold it, the device will start recording and the button will light green. On the backend, a subprocess is created to call arecord. When the user releases the button, the subprocess is killed and the recording is saved locally as a wav file. 
+
+What user can say/do:
+"day" : Switch background picture to day time
+"night": Switch background picture to night time
+"east": Move to one timezone towards EAST
+"west": Move to one timezone towards WEST
+"Shanghai"/"Paris"/"Tokyo" : Move to cities' local timezone
+
 *Include videos or screencaptures of both the system and the controller.*
+https://drive.google.com/file/d/1uvMaJ4uVw8CkpUMB78AXAFzb1jX_2Mbj/view?usp=sharing
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -91,18 +108,16 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+The system from Lab 2 was a little bit difficult to navigate because you have to move time zone one at a time. This time the system supports "jumping" directly to the time zone you want to see by using the voice recognition. What didnt' work well is the reaction time. There's always a delay between user input and device output. This delay is due to the latency of speech2text.
+
 
 ### What worked well about the controller and what didn't?
-
-*your answer here*
+I think the button worked really well. The green light of the button indicates the device is recording, which helps user understand the status of the device. The Mini USB Microphone didn't work well. There are several times that it couldn't recognize the voice.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-
-*your answer here*
+It's better to let the user know when to speak. For example, a "beep" sound can be implemented to remind user to begin talking. For my device, I simply used the green light to indicate the device is recording. Without the cues, user might be when they shouldn't in a more autonomous version of the system.
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
-
-*your answer here*
+My system can be improved by recognizing more valcabularies and support more time zone searches. I can alsy capture the accerlation of the device. For example, quckly moving the device from left to right can implies change timezone towards east. Quickly moving up and down can switch between day and night. This makes the device more interative than it already is.
 
