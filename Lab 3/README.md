@@ -86,18 +86,27 @@ The system should:
 ![Alt text](device.JPG?raw=true "Title")
 Lab 3 is built based on my Lab 2 code.
 
+
 Lab 2 Recap:
+
 For the previous lab, I developed a interactive device that shows current time in different timezones. User can use buttons on the display to switch time zone toward "East" or "West". The background images is displayed for each timezone (with Day Picture or Night Picture depending on local time).
 
 Lab 3 Improvement:
+
 For this week's lab, I implemented the voice recognition algorithm to the exisiting device. A mini USB microphone and QWIIC button are used to record the voice input. When the user press the QWIIC button and hold it, the device will start recording and the button will light green. On the backend, a subprocess is created to call arecord. When the user releases the button, the subprocess is killed and the recording is saved locally as a wav file. 
 
 What user can say/do:
+
 "day" : Switch background picture to day time
+
 "night": Switch background picture to night time
+
 "east": Move to one timezone towards EAST
+
 "west": Move to one timezone towards WEST
+
 "Shanghai"/"Paris"/"Tokyo" : Move to cities' local timezone
+
 
 *Include videos or screencaptures of both the system and the controller.*
 https://drive.google.com/file/d/1uvMaJ4uVw8CkpUMB78AXAFzb1jX_2Mbj/view?usp=sharing
