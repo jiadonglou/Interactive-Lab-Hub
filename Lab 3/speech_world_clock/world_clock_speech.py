@@ -205,6 +205,7 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 prevA = True
 prevB = True
+DAYNIGHT = "day"
 DAYNIGHTFORCE = False
 prevButton = False
 speechInput = False
