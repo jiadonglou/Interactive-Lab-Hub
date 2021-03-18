@@ -83,7 +83,7 @@ The system should:
 
 *Document how the system works*
 
-![Alt text](device.jpg?raw=true "Title")
+![Alt text](device.JPG?raw=true "Title")
 Lab 3 is built based on my Lab 2 code.
 
 Lab 2 Recap:
