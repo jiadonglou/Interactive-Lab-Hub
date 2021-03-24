@@ -4,14 +4,18 @@ import digitalio
 import board
 from PIL import Image, ImageDraw, ImageFont
 import adafruit_rgb_display.st7789 as st7789
+import time
+import board
+import busio
 
+import adafruit_mpr121
 
-s1 = [0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0]
-s2 = [0,0,0,0,4,0,4,0,0,0,0,0,4,2,0,2,0,1,1,0,1,0,0,0,0,0]
-s3 = [1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,3,0,3,0,1]
-s4 = [0,1,0,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0]
-s5 = [0,0,0,0,0,0,0,0,4,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0]
-s6 = [4,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,3,0,0,0,4]
+s1 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0]
+s2 = [0,0,0,0,1,0,0,0,0,0,4,0,4,0,0,0,0,0,4,2,0,2,0,1,1,0,1,0,0,0,0,0]
+s3 = [0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,3,0,3,0,1]
+s4 = [0,0,1,0,0,0,0,1,0,1,0,1,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0]
+s5 = [0,1,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0]
+s6 = [1,0,0,0,0,0,4,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,3,0,0,0,4]
 tab = [s1,s2,s3,s4,s5,s6]
 output = ["","","","","",""]
 
@@ -86,6 +90,9 @@ backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
 
+i2c = busio.I2C(board.SCL, board.SDA)
+
+mpr121 = adafruit_mpr121.MPR121(i2c)
 
 while True:
     # Draw a black filled box to clear the image.
@@ -97,5 +104,10 @@ while True:
         draw.text((0,20*i),output[i], font=font, fill = "#FFFFFF")
     # Display image.
     disp.image(image, rotation)
-    time.sleep(0.1)
-    current+=1
+
+    correct = True
+    for j in range(7):
+        correct = correct and ((tab[j][current]>0) == (mpr121[j].value))
+    if correct:
+        current+=1
+    time.sleep(1)
