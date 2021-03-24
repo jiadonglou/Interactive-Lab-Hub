@@ -11,6 +11,6 @@ mpr121 = adafruit_mpr121.MPR121(i2c)
 while True:
 	for i in range(12):
 		if mpr121[i].value:
-			mpr121[1].threshold(0.5)
+			mpr121[i].threshold(0.5)
 			print(f"Banana {i} touched!")
 	time.sleep(0.25)  # Small delay to keep from spamming output messages.
