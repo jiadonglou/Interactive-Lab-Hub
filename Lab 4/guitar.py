@@ -94,7 +94,7 @@ while True:
     #TODO: fill in here. You should be able to look in cli_clock.py and stats.py 
     for i in range(6):
         output[i] = convert(tab[i],current)
-        draw.text((0,10*i),output[i], font=font, fill = "#00FF00")
+        draw.text((0,20*i),output[i], font=font, fill = "#FFFFFF")
     # Display image.
     disp.image(image, rotation)
     time.sleep(1)
