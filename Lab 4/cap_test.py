@@ -8,7 +8,7 @@ i2c = busio.I2C(board.SCL, board.SDA)
 
 mpr121 = adafruit_mpr121.MPR121(i2c)
 #mpr121.threshold(0,10)
-print(mpr121[0].threshold())
+print(threshold(mpr121[0]))
 while True:
 	for i in range(12):
 		if mpr121[i].value:
