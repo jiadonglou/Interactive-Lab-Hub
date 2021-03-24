@@ -19,7 +19,7 @@ output = ["","","","","",""]
 current = 0
 def convert(s,begin):
     result = "|--"
-    for i in 5:
+    for i in range(5):
         value = s[begin+i]
         if value > 0:
             result+= " "
