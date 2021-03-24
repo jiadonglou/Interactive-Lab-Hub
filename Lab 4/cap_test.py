@@ -14,7 +14,6 @@ while True:
 
 	mpr121[1].threshold=95
 
-
 	for i in range(12):
 		if mpr121[i].value:
 			print(f"Banana {i} touched!")
