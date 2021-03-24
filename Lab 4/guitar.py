@@ -97,4 +97,5 @@ while True:
         draw.text((0,20*i),output[i], font=font, fill = "#FFFFFF")
     # Display image.
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(10)
+    current+=1
