@@ -106,7 +106,7 @@ while True:
     disp.image(image, rotation)
 
     correct = True
-    for j in range(7):
+    for j in range(6):
         correct = correct and ((tab[j][current]>0) == (mpr121[j].value))
     if correct:
         current+=1
