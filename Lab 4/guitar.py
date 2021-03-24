@@ -110,4 +110,8 @@ while True:
         correct = correct and ((tab[j][current]>0) == (mpr121[j].value))
     if correct:
         current+=1
+
+    for i in range(12):
+        if mpr121[i].value:
+            print(f"String {i} touched!")
     time.sleep(1)
