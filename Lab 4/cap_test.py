@@ -20,8 +20,8 @@ while True:
 	if test:
 		mpr121[1].threshold=th
 		th+=1
-	print(mpr121[1].threshold)
-	
+		print(mpr121[1].threshold)
+
 	for i in range(12):
 		if mpr121[i].value:
 			print(f"Banana {i} touched!")
