@@ -10,7 +10,7 @@ mpr121 = adafruit_mpr121.MPR121(i2c)
 #mpr121.threshold(0,10)
 
 while True:
-	#mpr121[1].threshold=95
+	mpr121[1].threshold=85
 
 	for i in range(12):
 		if mpr121[i].value:
