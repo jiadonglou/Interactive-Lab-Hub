@@ -114,4 +114,4 @@ while True:
     for i in range(12):
         if mpr121[i].value:
             print(f"String {i} touched!")
-    time.sleep(1)
+    time.sleep(0.1)
