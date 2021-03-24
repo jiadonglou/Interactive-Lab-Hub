@@ -8,9 +8,8 @@ i2c = busio.I2C(board.SCL, board.SDA)
 
 mpr121 = adafruit_mpr121.MPR121(i2c)
 
-
+mpr121[0].threshold(0.5)
 while True:
-	mpr121[0].threshold(0.5)
 	for i in range(12):
 		if mpr121[i].value:
         	print(f"Banana {i} touched!")
