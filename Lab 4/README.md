@@ -153,7 +153,7 @@ The capacitive sensors are connected with six strings on guitar, which can captu
 ![Alt text](capactivesensor.JPG?raw=true "Title")
 ![Alt text](capactivesensor2.JPG?raw=true "Title")
 
-**"Acts like" prototypes: **
+**"Acts like" prototypes:**
 
 User can follow the display instruction and play the guitar.
 
