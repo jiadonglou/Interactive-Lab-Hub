@@ -130,31 +130,33 @@ Make a paper display for your project that communicates the state of the Pi and 
 
 
 **a. Make a video of your paper display in action.**
-Idea:
+
+**Idea:**
 
 One problem that bothered me a lot when I was playing guitar is that I have to stop and use my finger to click/swipe/turn to the next page for my guitar tabs. Therefore, I designed a interactive device that automatically scoll the tab for you while you are playing your guitar. The device can recognize what you have just played and scroll tab accordingly. This could also be a very useful tools for beginer to learn how to play guitar.
 (However, due to technical difficulties, the capacitive sensor with copper tape doensn't always work well)
 
-Sketches/photos of device designs:
+**Sketches/photos of device designs:**
 
 ![Alt text](device.JPG?raw=true "Title")
 
 
-"Looks like" prototypes:
+**"Looks like" prototypes:**
 
 The device will have a display as user interface. It will be attached to the guitar.
 ![Alt text](display.JPG?raw=true "Title")
 
 
-"Works like" prototypes:
+**"Works like" prototypes:**
 
 The capacitive sensors are connected with six strings on guitar, which can capture what user has played.
 ![Alt text](capactivesensor.JPG?raw=true "Title")
 ![Alt text](capactivesensor2.JPG?raw=true "Title")
 
-"Acts like" prototypes: 
+**"Acts like" prototypes: **
 
 User can follow the display instruction and play the guitar.
+
 https://drive.google.com/file/d/1K9zP594DkEvXU45OSdBJ6RkoZKExoxjr/view?usp=sharing
 
 
