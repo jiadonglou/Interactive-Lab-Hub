@@ -150,8 +150,8 @@ The device will have a display as user interface. It will be attached to the gui
 **"Works like" prototypes:**
 
 The capacitive sensors are connected with six strings on guitar, which can capture what user has played.
-![Alt text](capactivesensor.JPG?raw=true "Title")
-![Alt text](capactivesensor2.JPG?raw=true "Title")
+![Alt text](capacitivesensor.JPG?raw=true "Title")
+![Alt text](capacitivesensor2.JPG?raw=true "Title")
 
 **"Acts like" prototypes:**
 
