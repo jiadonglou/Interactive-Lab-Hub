@@ -130,38 +130,17 @@ Make a paper display for your project that communicates the state of the Pi and 
  
 **a. Document the design for your paper display.** (e.g. if you had to make it again from scratch, what information would you need?). Include interim iterations (or at least tell us about them).
 
-**b. Make a video of your paper display in action.**
-
-**c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
-
-**Idea:**
-
 One problem that bothered me a lot when I was playing guitar is that I have to stop and use my finger to click/swipe/turn to the next page for my guitar tabs. Therefore, I designed a interactive device that automatically scoll the tab for you while you are playing your guitar. The device can recognize what you have just played and scroll tab accordingly. This could also be a very useful tools for beginer to learn how to play guitar.
 (However, due to technical difficulties, the capacitive sensor with copper tape doensn't always work well)
 
-**Sketches/photos of device designs:**
+**b. Make a video of your paper display in action.**
 
-![Alt text](device.JPG?raw=true "Title")
-
-
-**"Looks like" prototypes:**
-
-The device will have a display as user interface. It will be attached to the guitar.
-![Alt text](display.JPG?raw=true "Title")
+https://drive.google.com/file/d/1X7n_I80ykPAjEYHaKEFtIfg4OZBG0Tq4/view?usp=sharing
 
 
-**"Works like" prototypes:**
+**c. Explain the rationale for the design.** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-The capacitive sensors are connected with six strings on guitar, which can capture what user has played.
-![Alt text](capacitivesensor.JPG?raw=true "Title")
-![Alt text](capacitivesensor2.JPG?raw=true "Title")
-
-**"Acts like" prototypes:**
-
-User can follow the display instruction and play the guitar.
-
-https://drive.google.com/file/d/1K9zP594DkEvXU45OSdBJ6RkoZKExoxjr/view?usp=sharing
-
+Because the device will be used by guitar player, we need the device to be attached to the guitar. In addition, it needs to face user and keep about 50cm away from user. 
 
 ### Part D
 ### Materiality
@@ -172,7 +151,17 @@ Design a system with the Pi and anything from your kit with a focus on form, and
 
 **a. document the material prototype.** Include candidates that were considered even if they were set aside later.
 
+Cardboard
+
+Double-side Tape
+
+Regular Tape
+
+Copper Tape
+
 **b. explain the selection.**
+
+Carboard is used because it's very easy to use for prototype. Double-side tape is used to attach the device to the guitar. The regular tape is used to enclose the carboard/device. The copper tape will be used to connect to the guitar input.
 
 ### Part 2.
 
@@ -181,9 +170,26 @@ Following exploration and reflection from Part 1, complete the "looks like," "wo
 Reiterating:
 ### Deliverables for this lab are: 
 1. Sketches/photos of device designs
-1. "Looks like" prototypes: show us what how the device should look, feel, sit, weigh, etc.
-3. "Works like" prototypes: show us what the device can do
-4. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
-5. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
+
+![Alt text](device.JPG?raw=true "Title")
+
+3. "Looks like" prototypes: show us what how the device should look, feel, sit, weigh, etc.
+
+The device will have a display as user interface. It will be attached to the guitar.
+![Alt text](display.JPG?raw=true "Title")
+
+5. "Works like" prototypes: show us what the device can do
+
+The capacitive sensors are connected with six strings on guitar, which can capture what user has played.
+![Alt text](capacitivesensor.JPG?raw=true "Title")
+![Alt text](capacitivesensor2.JPG?raw=true "Title")
+
+7. "Acts like" prototypes: videos/storyboards/other means of showing how a person would interact with the device
+
+User can follow the display instruction and play the guitar.
+
+https://drive.google.com/file/d/1K9zP594DkEvXU45OSdBJ6RkoZKExoxjr/view?usp=sharing
+
+9. Submit these in the lab 4 folder of your class [Github page], either as links or uploaded files. Each group member should post their own copy of the work to their own Lab Hub, even if some of the work is the same for each person in the group.
 
 
