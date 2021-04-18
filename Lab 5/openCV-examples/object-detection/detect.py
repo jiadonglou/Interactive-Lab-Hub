@@ -89,7 +89,6 @@ while(True):
           photo='detected.jpg'
           bucket='cornelltech'
           api2=detect_labels(photo, bucket)
-          time.sleep(5)
           continue
         cv2.imshow('detected (press q to quit)',img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
