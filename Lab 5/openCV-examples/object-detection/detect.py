@@ -38,7 +38,7 @@ def detect_labels(photo, bucket):
     output=''
     for label in response['Labels']:
 
-      if label['Confidence'] > 50:
+      if label['Confidence'] > 80:
         output=output+label['Name']+" | "
     print("Detected:"+output, end='\r')
     return len(response['Labels'])
@@ -70,6 +70,8 @@ else:
 
 
 while(True):
+    print("Enter anything to capture the image: ")
+    a = input()
     if webCam:
         ret, img = cap.read()
 
@@ -88,7 +90,6 @@ while(True):
           photo='detected.jpg'
           bucket='cornelltech'
           label_count=detect_labels(photo, bucket)
-          time.sleep(3)
 
           continue
         cv2.imshow('detected (press q to quit)',img)
