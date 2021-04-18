@@ -40,7 +40,7 @@ def detect_labels(photo, bucket):
 
       if label['Confidence'] > 80:
         output=output+label['Name']+" | "
-    print("Detected:"+output, end='\r')
+    print("Detected:"+output)
     return True
 
 
@@ -70,8 +70,7 @@ else:
 
 
 while(True):
-    print("Enter Anything")
-    x=input()
+
     if webCam:
         ret, img = cap.read()
 
@@ -86,10 +85,11 @@ while(True):
     if webCam:
         if sys.argv[-1] == "noWindow":
           cv2.imwrite('detected.jpg',img)
-          api1 = upload_to_aws('detected.jpg', 'cornelltech', 'detected.jpg')
+          uploaded = upload_to_aws('detected.jpg', 'cornelltech', 'detected.jpg')
           photo='detected.jpg'
           bucket='cornelltech'
-          api2=detect_labels(photo, bucket)
+          if uploaded:
+            api2=detect_labels(photo, bucket)
           continue
         cv2.imshow('detected (press q to quit)',img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
