@@ -88,6 +88,7 @@ while(True):
           photo='detected.jpg'
           bucket='cornelltech'
           label_count=detect_labels(photo, bucket)
+          time.sleep(3)
 
           continue
         cv2.imshow('detected (press q to quit)',img)
