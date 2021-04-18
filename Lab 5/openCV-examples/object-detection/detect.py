@@ -21,13 +21,10 @@ def upload_to_aws(local_file, bucket, s3_file):
 
     try:
         s3.upload_file(local_file, bucket, s3_file)
-        print("Upload Successful")
         return True
     except FileNotFoundError:
-        print("The file was not found")
         return False
     except NoCredentialsError:
-        print("Credentials not available")
         return False
 
 
@@ -41,7 +38,7 @@ def detect_labels(photo, bucket):
     output=''
     for label in response['Labels']:
 
-      if label['Confidence'] > 85:
+      if label['Confidence'] > 50:
         output=output+label['Name']+" | "
     print("Detected:"+output, end='\r')
     return len(response['Labels'])
