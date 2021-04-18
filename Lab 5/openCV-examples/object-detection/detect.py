@@ -70,6 +70,8 @@ else:
 
 
 while(True):
+    print("Enter Anything")
+    x=input()
     if webCam:
         ret, img = cap.read()
 
@@ -83,17 +85,11 @@ while(True):
 
     if webCam:
         if sys.argv[-1] == "noWindow":
-          api1 = False
-          api2 = False
           cv2.imwrite('detected.jpg',img)
           api1 = upload_to_aws('detected.jpg', 'cornelltech', 'detected.jpg')
-          while(not api1):
-            time.sleep(1)
           photo='detected.jpg'
           bucket='cornelltech'
           api2=detect_labels(photo, bucket)
-          while(not api2):
-            time.sleep(1)
           continue
         cv2.imshow('detected (press q to quit)',img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
