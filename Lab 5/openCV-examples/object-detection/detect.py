@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 import sys
 import requests
-
+import time
 import boto3
 from botocore.exceptions import NoCredentialsError
 
