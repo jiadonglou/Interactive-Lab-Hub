@@ -88,9 +88,8 @@ while(True):
           uploaded = upload_to_aws('detected.jpg', 'cornelltech', 'detected.jpg')
           photo='detected.jpg'
           bucket='cornelltech'
-          while(not uploaded):
-            time.sleep(0.1)
           api2=detect_labels(photo, bucket)
+          time.sleep(5)
           continue
         cv2.imshow('detected (press q to quit)',img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
