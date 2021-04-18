@@ -21,6 +21,9 @@ def upload_to_aws(local_file, bucket, s3_file):
 
     try:
         s3.upload_file(local_file, bucket, s3_file)
+        photo='detected.jpg'
+        bucket='cornelltech'
+        api2=detect_labels(photo, bucket)
         return True
     except FileNotFoundError:
         return False
@@ -86,9 +89,6 @@ while(True):
         if sys.argv[-1] == "noWindow":
           cv2.imwrite('detected.jpg',img)
           uploaded = upload_to_aws('detected.jpg', 'cornelltech', 'detected.jpg')
-          photo='detected.jpg'
-          bucket='cornelltech'
-          api2=detect_labels(photo, bucket)
           continue
         cv2.imshow('detected (press q to quit)',img)
         if cv2.waitKey(1) & 0xFF == ord('q'):
