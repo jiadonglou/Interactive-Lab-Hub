@@ -166,7 +166,7 @@ During the lecture, we mentioned questions to help characterize a material:
 
 https://drive.google.com/file/d/1mb7OkktJgD9h5YfnESLFnkfi2wGTN-6r/view?usp=sharing
 
-![Alt text](sketch.jpg?raw=true "Title")
+![Alt text](sketch.png?raw=true "Title")
 
 To better visualize the system, the sketch illustrates a scenario when the detection and recognition system is used in a jewelry store. In our vision, the system serves as an alarm/recording system to prevent stealing. The system is best used for environments with a lot of movement (ex. customers walking around), as it helps to ensure the location of specific items without causing false alarm. However since the system requires specific lighting and angle to ensure the quality of the capture and recognition, places with natural light might be a bad fit to use it. The system would break when the object is completely covered by the crowds, and to avoid this, the angle of the camera placement is important. The system should merge with the environment well, serving like a hidden surveillance camera.### Part 2.
 
