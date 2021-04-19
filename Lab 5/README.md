@@ -119,7 +119,9 @@ As a note, the global Python install contains also a PyTorch installation. That 
 Pick one of the models you have tried, pick a class of objects, and experiment with prototyping an interaction.
 This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
-**Describe and detail the interaction, as well as your experimentation.**
+**Describe and detail the interaction, as well as your experimentation.*
+
+I tried the object-detection model. I picked my iPhone as the object that I would like to detect. Then I prototyped it by taping the Web Cam on a bottle of water and look at the wall. I placed a iphone in front of the camera and the Raspbery Pi successfully recoginized and captured the Object.
 
 ### Part C
 ### Test the interaction prototype
@@ -131,11 +133,15 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+What the model is supposed to do is detect and crop the object from a scene. It's constantly capturing the image and will return the coordinates of found object in the image. It can be used as a survilliance camera. For example, when you are out of your home, you can set up the webcam and the program. It will keep tracing objects in the camera. When the someone breaks in by or some objects are moving, the program can automatically save that image. It fails when the background is dark. It fails because the camera does not support night vision. It can also cause problem when the background is too bright.
+
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+User will be aware of the uncertainties in the system because the quality of WebCam is not as good. If the system doesn't work due to the camera's inability to capture good images, the entrie device became useless. In order to address this, I would need to make sure to use a better camera with night vision supported. Because the purpose of the system is more to survilliance instead of recognition, I can lower the threshold of classifying an object. As long as there's any movements in the camera, it will capture it.
 
 ### Part D
 ### Characterize your own Observant system
@@ -158,3 +164,4 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **Include a short video demonstrating the finished result.**
 
+https://drive.google.com/file/d/1ZsQUo7qp0u2HbnOZFeEempm8NdONMOWC/view?usp=sharing
