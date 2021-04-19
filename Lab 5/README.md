@@ -121,7 +121,11 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.*
 
-I tried the object-detection model. I picked my iPhone as the object that I would like to detect. Then I prototyped it by taping the Web Cam on a bottle of water and look at the wall. I placed a iphone in front of the camera and the Raspbery Pi successfully recoginized and captured the Object.
+For this Lab, I collaborated with Chelsea Luo (cl773)
+
+After trying the models, we have decided to use the object-detection model. We picked my iPhone as the object that we would like to detect. Then we prototyped it by taping the Web-Cam on a bottle of water and look at the wall. We placed a iphone in front of the camera and the Raspbery Pi successfully recoginized and captured the Object. Using what we learned, we want to combine the detection with recognition, which is implemented later in the lab. We plan to use Amazon Rekognition to identify objects.
+
+
 
 ### Part C
 ### Test the interaction prototype
@@ -133,7 +137,9 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
-What the model is supposed to do is detect and crop the object from a scene. It's constantly capturing the image and will return the coordinates of found object in the image. It can be used as a survilliance camera. For example, when you are out of your home, you can set up the webcam and the program. It will keep tracing objects in the camera. When the someone breaks in by or some objects are moving, the program can automatically save that image. It fails when the background is dark. It fails because the camera does not support night vision. It can also cause problem when the background is too bright.
+What the model is supposed to do is detect and crop the object from a scene. It's constantly capturing the image and will return the coordinates of found object in the image. It can be used as a survilliance camera. For example, when you are out of your home, you can set up the webcam and the program. It will keep tracing objects in the camera. When the someone breaks in by or some objects are moving, the program can automatically save that image. It fails when the background is dark. It fails because the camera does not support night vision. It can also cause problem when the background is too bright. We envisioned such system would be useful in environments such as museums or jewelry stores.
+
+
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
@@ -141,7 +147,7 @@ What the model is supposed to do is detect and crop the object from a scene. It'
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
 
-User will be aware of the uncertainties in the system because the quality of WebCam is not as good. If the system doesn't work due to the camera's inability to capture good images, the entrie device became useless. In order to address this, I would need to make sure to use a better camera with night vision supported. Because the purpose of the system is more to survilliance instead of recognition, I can lower the threshold of classifying an object. As long as there's any movements in the camera, it will capture it.
+User will be aware of the uncertainties in the system because the quality of WebCam is not as good. If the system doesn't work due to the camera's inability to capture good images, the entrie device became useless. In order to address this, we would need to make sure to use a better camera with night vision supported. Because the purpose of the system is more to survilliance instead of recognition at this stage of the lab, we can lower the threshold of classifying an object for now. As long as there's any movements in the camera, it will capture it. However, this could be an issue when we actually need to recognize the object, as it could severely impact by the miss recognition.
 
 ### Part D
 ### Characterize your own Observant system
@@ -158,10 +164,22 @@ During the lecture, we mentioned questions to help characterize a material:
 
 **Include a short video demonstrating the answers to these questions.**
 
-### Part 2.
+https://drive.google.com/file/d/1mb7OkktJgD9h5YfnESLFnkfi2wGTN-6r/view?usp=sharing
+
+![Alt text](sketch.jpg?raw=true "Title")
+
+To better visualize the system, the sketch illustrates a scenario when the detection and recognition system is used in a jewelry store. In our vision, the system serves as an alarm/recording system to prevent stealing. The system is best used for environments with a lot of movement (ex. customers walking around), as it helps to ensure the location of specific items without causing false alarm. However since the system requires specific lighting and angle to ensure the quality of the capture and recognition, places with natural light might be a bad fit to use it. The system would break when the object is completely covered by the crowds, and to avoid this, the angle of the camera placement is important. The system should merge with the environment well, serving like a hidden surveillance camera.### Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **Include a short video demonstrating the finished result.**
 
+Our system uses WebCamera to detect objects every frame. The image is uploaded directly from Raspberry Pi to Amazon S3 server. Then the program will use Amazon's Rekgonition API and make an object recognition request. The results will show a list of objects detected in the image. If we want to track a iPhone, then the program can only track the location of the iPhone. When the iPhone is moved or stolen, it will record when it happened.
+
 https://drive.google.com/file/d/1ZsQUo7qp0u2HbnOZFeEempm8NdONMOWC/view?usp=sharing
+
+Because we had no prior experience with Amazon API, it took us a lot of time to learn how to connect to the AWS server on Raspberry Pi. And we need to install a older version of AWS CLI.
+
+Jiadong Lou: Responsible for setting up the Amazon API, and code to request Amazon Recokgnition API.
+
+Chelsea Luo: Responsible for reading API documentation, and code to upload images to the Amazon server.
