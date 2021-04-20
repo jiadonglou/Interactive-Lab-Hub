@@ -84,7 +84,7 @@ pi@ixe00:~/openCV-examples $ tree -l
     └── ssd_mobilenet_v2_coco_2018_03_29.pbtxt
 ```
 
-![Alt text](detect_out.jpg?raw=true "Title")
+![Alt text](detected_out.jpg?raw=true "Title")
 
 #### Filtering, FFTs, and Time Series data.
 Additional filtering and analysis can be done on the sensors that were provided in the kit. For example, running a Fast Fourier Transform over the IMU data stream could create a simple activity classifier between walking, running, and standing.
