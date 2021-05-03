@@ -85,12 +85,24 @@ Glitch is a great tool for prototyping sites, interfaces and web-apps that's wor
 
 Find at least one class (more are okay) partner, and design a distributed application together. 
 
+Partner: Chelsea Luo (cl773)
+
 **1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
+
+Our system is a remote guitar playing system. Given the current circumstances, it is hard to do music lectures with just remote recording. By poviding a note to note replay of the other user, the receiver can hear the sound while seeing which note is being played individually.
+
 
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
+![Alt text](mqtt_explorer.png?raw=true "Title")
+
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
 
+We made some modification on previous lab for the guitar note sensing portion of the lab. We then connected the speaker to the pi using Aux cable on the other end. The guitar mp3 sounds are generated using this site: https://www.musicca.com/guitar?notes=&highlighted=&inverted=
+
+
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+
+https://drive.google.com/file/d/1i_gDAcvQe8Vf2mZflQNcvT7RK_Srwacf/view?usp=sharing
 
 **5. BONUS (Wendy didn't approve this so you should probably ignore it)** get the whole class to run your code and make your distributed system BIGGER.
