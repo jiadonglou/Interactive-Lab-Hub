@@ -117,7 +117,7 @@ def play(){
     ## Add Play Music
     for i in range(6):
         if tab[i][play_index]>0:
-            play_file = str(i) + str(tabp[i][play_index]-1)
+            play_file = str(i) + "_"+str(tabp[i][play_index]-1)
 
     #####Play Here ########
     #play_file
