@@ -21,7 +21,7 @@ client.username_pw_set('idd', 'device@theFarm')
 client.connect(
     'farlab.infosci.cornell.edu',
     port=8883)
-topic = f"IDD/ski/left"
+topic = f"IDD/ski/right"
 
 # Given a point (x, y) return the angle of that point relative to x axis.
 # Returns: angle in degrees
