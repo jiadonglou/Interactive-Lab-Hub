@@ -19,8 +19,8 @@ client.username_pw_set('idd', 'device@theFarm')
 
 #connect to the broker
 client.connect(
-    'farlab.infosci.cornell.edu',
-    port=8883)
+	'farlab.infosci.cornell.edu',
+	port=8883)
 topic = f"IDD/ski/left"
 
 # Given a point (x, y) return the angle of that point relative to x axis.
@@ -28,10 +28,10 @@ topic = f"IDD/ski/left"
 
 
 def vector_2_degrees(x, y):
-    angle = degrees(atan2(y, x))
-    if angle < 0:
-        angle += 360
-    return angle
+	angle = degrees(atan2(y, x))
+	if angle < 0:
+		angle += 360
+	return angle
 
 
 # Given an accelerometer sensor object return the inclination angles of X/Z and Y/Z
@@ -39,14 +39,14 @@ def vector_2_degrees(x, y):
 
 
 def get_inclination(_sensor):
-    x, y, z = _sensor.acceleration
-    return vector_2_degrees(x, z), vector_2_degrees(y, z)
+	x, y, z = _sensor.acceleration
+	return vector_2_degrees(x, z), vector_2_degrees(y, z)
 
 while True:
 	angle_xz, angle_yz = get_inclination(sensor)
-    #output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
-    output = "{:6.2f}".format(angle_xz)
-    val = datetime.now().strftime('%Y-%m-%d %H:%M:%S') + "+"+output
+	#output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
+	output = "{:6.2f}".format(angle_xz)
+	val = datetime.now().strftime('%Y-%m-%d %H:%M:%S') + "+"+output
 	client.publish(topic, val)
 	time.sleep(0.1)
 
