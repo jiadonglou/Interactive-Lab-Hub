@@ -12,7 +12,8 @@ df = pd.read_csv (r'./template.csv')
 def parse_data(side,msg):
 	global df
 	msg_split = msg.payload.decode('UTF-8').split('+')
-	if msg_split[0] in df['timestamp']:
+	if str(msg_split[0]) in df['timestamp'].values:
+		print('check')
 		idx = df[df['timestamp']== msg_split[0]].index.values
 		df[side][idx] = msg_split[1]
 	else:
