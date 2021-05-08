@@ -46,7 +46,8 @@ while True:
 	angle_xz, angle_yz = get_inclination(sensor)
 	#output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
 	output = "{:6.2f}".format(angle_xz)
-	val = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%.1f') + "+"+output
+	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')[0:20]
+	val = timestamp + "+"+ output
 	client.publish(topic, val)
 	time.sleep(0.1)
 
