@@ -13,11 +13,13 @@ def parse_data(side,msg):
 	global df
 	msg_split = msg.payload.decode('UTF-8').split('+')
 	if str(msg_split[0]) in df['timestamp'].values:
-		print('check')
 		idx = df[df['timestamp']== msg_split[0]].index.values
 		df[side][idx] = msg_split[1]
 	else:
-		tempdf = {'timestamp': msg_split[0], side: msg_split[1]}
+		if side == 'left':
+			tempdf = {'timestamp': msg_split[0], 'left': msg_split[1],'right':df['right'][len(df.index)-1]}
+		else:
+			tempdf = {'timestamp': msg_split[0], 'left': df['left'][len(df.index)-1],'right':msg_split[1]}
 		df = df.append(tempdf, ignore_index = True)
 	df.to_csv (r'result.csv', index = False, header=True)
 
