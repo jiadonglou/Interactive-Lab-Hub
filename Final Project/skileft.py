@@ -83,7 +83,7 @@ def draw_green():
 #we should add our subscribe functions here as well
 def on_connect(client, userdata, flags, rc):
 	print(f"connected with result code {rc}")
-	client.subscribe('IDD/ski/right')
+	client.subscribe('IDD/ski/carving')
 	# you can subsribe to as many topics as you'd like
 	# client.subscribe('some/other/topic')
 
