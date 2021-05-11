@@ -25,7 +25,8 @@ topic = f"IDD/ski/right"
 
 # Given a point (x, y) return the angle of that point relative to x axis.
 # Returns: angle in degrees
-
+def myround(x, base=5):
+    return base * round(x/base)
 
 def vector_2_degrees(x, y):
 	angle = degrees(atan2(y, x))
