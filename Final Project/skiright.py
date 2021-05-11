@@ -31,7 +31,9 @@ def vector_2_degrees(x, y):
 	angle = degrees(atan2(y, x))
 	if angle < 0:
 		angle += 360
-	return angle
+	angle = int(angle)
+	angle = myround(angle)
+	return 180-angle
 
 
 # Given an accelerometer sensor object return the inclination angles of X/Z and Y/Z
@@ -46,8 +48,10 @@ while True:
 	angle_xz, angle_yz = get_inclination(sensor)
 	#output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
 	output = "{:6.2f}".format(angle_xz)
-	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-	timestamp=timestamp[:21]
+	#timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+	#timestamp=timestamp[:21]
+	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+	val = timestamp + "+"+ output
 	client.publish(topic, val)
 	time.sleep(0.1)
 
