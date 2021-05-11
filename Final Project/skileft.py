@@ -10,12 +10,39 @@ import adafruit_mpu6050
 i2c = board.I2C()  # uses board.SCL and board.SDA
 sensor = adafruit_mpu6050.MPU6050(i2c)
 
+
+#this is the callback that gets called once we connect to the broker. 
+#we should add our subscribe functions here as well
+def on_connect(client, userdata, flags, rc):
+	print(f"connected with result code {rc}")
+	client.subscribe('IDD/ski/left')
+	client.subscribe('IDD/ski/right')
+	# you can subsribe to as many topics as you'd like
+	# client.subscribe('some/other/topic')
+
+
+# this is the callback that gets called each time a message is recived
+def on_message(cleint, userdata, msg):
+	#print(f"topic: {msg.topic} msg: {msg.payload.decode('UTF-8')}")
+	# you can filter by topics
+	if msg.topic == 'IDD/ski/left':
+		print(msg)
+	elif msg.topic == 'IDD/ski/right':
+		print(msg)
+
+
 # Every client needs a random ID
 client = mqtt.Client(str(uuid.uuid1()))
 # configure network encryption etc
 client.tls_set()
 # this is the username and pw we have setup for the class
 client.username_pw_set('idd', 'device@theFarm')
+
+
+
+# attach out callbacks to the client
+client.on_connect = on_connect
+client.on_message = on_message
 
 #connect to the broker
 client.connect(
@@ -46,6 +73,7 @@ def get_inclination(_sensor):
 	x, y, z = _sensor.acceleration
 	return vector_2_degrees(x, z), vector_2_degrees(y, z)
 
+client.loop_start()
 while True:
 	angle_xz, angle_yz = get_inclination(sensor)
 	#output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
