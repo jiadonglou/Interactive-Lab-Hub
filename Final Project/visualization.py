@@ -22,9 +22,10 @@ def animate(i):
 	y=list(Left)
 
 	if len(x)>30:
-		x = x[-300:]		
+		x = x[-30:]		
 	if len(y)>30:
-		y = y[-300:]
+		y = y[-30:]
+
 
 	temp = list(range(0,len(x)))
 
@@ -34,10 +35,19 @@ def animate(i):
 	plt.plot(x,temp, label='Right board')
 	plt.plot(y,temp, label='Left board')
 	plt.xlim([0, 360])
-	plt.ylim([0, 300])
+	plt.ylim([0, 40])
 	plt.legend(loc='upper left')
 	plt.xlabel('Orange: Left board angle. Blue: Right board angle')
 	plt.ylabel('Time')
 
-ani = FuncAnimation(plt.gcf(), animate, interval=500)
+	if abs(x[-1]-180 - y[-1])<11:
+		text_kwargs = dict(ha='center', va='center', fontsize=28, color='g')
+		plt.text(180, 35, 'Carving', **text_kwargs)
+	else:
+		text_kwargs = dict(ha='center', va='center', fontsize=28, color='r')
+		plt.text(180, 35, 'Not Carving', **text_kwargs)
+	
+
+
+ani = FuncAnimation(plt.gcf(), animate, interval=1000)
 plt.show()

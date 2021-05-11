@@ -35,7 +35,7 @@ def vector_2_degrees(x, y):
 		angle += 360
 	angle = int(angle)
 	angle = myround(angle)
-	return angle
+	return 180-angle
 
 
 # Given an accelerometer sensor object return the inclination angles of X/Z and Y/Z
