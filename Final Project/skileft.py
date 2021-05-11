@@ -26,7 +26,7 @@ topic = f"IDD/ski/left"
 # Given a point (x, y) return the angle of that point relative to x axis.
 # Returns: angle in degrees
 
-def myround(x, base=2):
+def myround(x, base=5):
     return base * round(x/base)
 
 def vector_2_degrees(x, y):
@@ -50,8 +50,9 @@ while True:
 	angle_xz, angle_yz = get_inclination(sensor)
 	#output = "{:6.2f}-{:6.2f}".format(angle_xz, angle_yz)
 	output = "{:6.2f}".format(angle_xz)
-	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
-	timestamp=timestamp[:21]
+	#timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
+	#timestamp=timestamp[:21]
+	timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 	val = timestamp + "+"+ output
 	client.publish(topic, val)
 	time.sleep(0.1)
