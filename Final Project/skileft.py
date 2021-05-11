@@ -28,7 +28,7 @@ def on_message(cleint, userdata, msg):
 	if msg.topic == 'IDD/ski/left':
 		print(msg)
 	elif msg.topic == 'IDD/ski/right':
-		print(msg)
+		print(msg.payload.decode('UTF-8').split('+')[0])
 
 
 # Every client needs a random ID
