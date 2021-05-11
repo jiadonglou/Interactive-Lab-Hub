@@ -1,7 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-
+import paho.mqtt.client as mqtt
+import uuid
+from datetime import datetime
 
 
 x=[]
@@ -43,11 +45,25 @@ def animate(i):
 	if abs(x[-1]-180 - y[-1])<11:
 		text_kwargs = dict(ha='center', va='center', fontsize=28, color='g')
 		plt.text(180, 35, 'Carving', **text_kwargs)
+		client.publish(topic, 1)
 	else:
 		text_kwargs = dict(ha='center', va='center', fontsize=28, color='r')
 		plt.text(180, 35, 'Not Carving', **text_kwargs)
+		client.publish(topic, 0)
+
 	
 
+# Every client needs a random ID
+client = mqtt.Client(str(uuid.uuid1()))
+# configure network encryption etc
+client.tls_set()
+# this is the username and pw we have setup for the class
+client.username_pw_set('idd', 'device@theFarm')
 
+#connect to the broker
+client.connect(
+	'farlab.infosci.cornell.edu',
+	port=8883)
+topic = f"IDD/ski/carving"
 ani = FuncAnimation(plt.gcf(), animate, interval=1000)
 plt.show()
