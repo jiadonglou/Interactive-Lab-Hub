@@ -22,9 +22,9 @@ def animate(i):
 	y=list(Left)
 
 	if len(x)>30:
-		x = x[-30:]		
+		x = x[-300:]		
 	if len(y)>30:
-		y = y[-30:]
+		y = y[-300:]
 
 	temp = list(range(0,len(x)))
 
@@ -34,10 +34,10 @@ def animate(i):
 	plt.plot(x,temp, label='Right board')
 	plt.plot(y,temp, label='Left board')
 	plt.xlim([0, 360])
-	plt.ylim([0, 30])
+	plt.ylim([0, 300])
 	plt.legend(loc='upper left')
 	plt.xlabel('Orange: Left board angle. Blue: Right board angle')
 	plt.ylabel('Time')
 
-ani = FuncAnimation(plt.gcf(), animate, interval=1000)
+ani = FuncAnimation(plt.gcf(), animate, interval=500)
 plt.show()
