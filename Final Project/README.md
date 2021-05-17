@@ -40,7 +40,7 @@ Since we want to have a real-time graphical display, allowing someone like a tra
 ## Video
 https://drive.google.com/file/d/1h3ePDPEj6DfpaxpS3JtX8lq7xh7sKwb6/view?usp=sharing
 
-### Installation
+## Installation
 
 1. Clone the repo on two Pis and desktop
    ```sh
