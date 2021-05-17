@@ -22,7 +22,8 @@ As seen in the diagram, the main parts that perform the functionalities of the d
 2. Two Accelerometers
 3. A computer 
 
-We start by placing the two accelerometers on both of the skiis, connected to the pis. 
+We start by placing the two accelerometers on both of the skiis. Each accelerometer is getting the angle of the skies. The angle data and the timestamp is then sent via MQTT to the desktop backend. The desktop program will parse the data recieved, automatically merge angles from two Pis, and then save them all in a CSV file. The data visualization program will take the angle data and plot them on the graph. If the delta of two angles are greater than 10 degrees, the program will determine that the user is not carving and then send that information back to the Pis via MQTT.
+
 ![](ski.jpg)
 
 
@@ -38,6 +39,36 @@ Since we want to have a real-time graphical display, allowing someone like a tra
 
 ## Video
 https://drive.google.com/file/d/1h3ePDPEj6DfpaxpS3JtX8lq7xh7sKwb6/view?usp=sharing
+
+### Installation
+
+1. Clone the repo on two Pis and desktop
+   ```sh
+   git clone https://github.com/jiadonglou/Interactive-Lab-Hub
+   ```
+2. Change Directory to Final Project
+   ```sh
+   cd 'Final Project'
+   ```
+3. Install all dependancies
+   ```sh
+   pip install -r requirements.txt
+   ```
+   
+4. Run program on both of your Skiis
+   ```sh
+   python skileft.py
+   ```
+   or
+   ```sh
+   python skiright.py
+   ```
+
+5. Run program on your desktop
+   ```sh
+   python reader.py
+   python visualization.py
+   ```
 
 ## Reflection
 Overall, we are pretty satisfied with the progress of the project -- we are able to implement most of the functionalities that are planned. It is also worthy to note that we are suprised by the sheer amount of resources available online -- a lot of the seemingly difficult tasks (like having the pi to receive and send data on the same time) are much easier than we expected due to the sheer amount of tutorial and resources we can find. 
